@@ -8,6 +8,9 @@
 #include "vm.h"
 
 static void repl() {
+
+  printf("in repl\n");
+
   char line[1024];
   for (;;) {
     printf("> ");
@@ -60,7 +63,12 @@ static void runFile(const char* path) {
 }
 
 int main(int argc, const char* argv[]) {
+
+  printf("in main\n");
+
   initVM();
+
+  printf("after initVM\n");
 
   if (argc == 1) {
     repl();
